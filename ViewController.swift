@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Show" {
         let vc = segue.destinationViewController as! SecondViewController
-        
+        vc.delegate = self
+            
         
         }
     }
@@ -23,3 +24,11 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: SecondViewControllerDelegate {
+
+    func doSomething() {
+        
+    }
+
+
+}
